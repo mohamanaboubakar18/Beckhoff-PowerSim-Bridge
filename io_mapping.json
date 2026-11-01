@@ -1,0 +1,21 @@
+{
+  "plc_target": {
+    "ams_net_id": "10.89.197.98.1.1",
+    "ams_port": 851
+  },
+  "variables": {
+    "inputs_from_plc": {
+      "MAIN.bStartCmd": {"type": "BOOL", "default": false, "desc": "Ordre de marche variateur"},
+      "MAIN.bResetFault": {"type": "BOOL", "default": false, "desc": "Acquittement défauts"},
+      "MAIN.fSpeedSetpoint_RPM": {"type": "LREAL", "default": 1500.0, "desc": "Consigne vitesse rotor (RPM)"}
+    },
+    "outputs_to_plc": {
+      "MAIN.fActualSpeed_RPM": {"type": "LREAL", "default": 0.0, "desc": "Mesure vitesse (RPM)"},
+      "MAIN.fDcBusVoltage_V": {"type": "LREAL", "default": 690.0, "desc": "Tension Bus DC (V)"},
+      "MAIN.fStatorCurrent_A": {"type": "LREAL", "default": 0.0, "desc": "Courant statorique (A)"},
+      "MAIN.fIgbtTemp_C": {"type": "LREAL", "default": 35.0, "desc": "Température jonction IGBT (°C)"},
+      "MAIN.bReadyToRun": {"type": "BOOL", "default": true, "desc": "état Prêt (Disjoncteur OK)"},
+      "MAIN.bFaultTripped": {"type": "BOOL", "default": false, "desc": "Défaut actif (Trip protection)"}
+    }
+  }
+}
